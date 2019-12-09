@@ -1,0 +1,251 @@
+/* center canvas element and add background */
+
+body {
+    text-align: center;
+    background: url(/images/paintbg.jpg) center center fixed;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+/* title */
+
+#header {
+    height: 80px;
+    width: 500px;
+    margin: 10px auto;
+    font-size: 5em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #bc2e1e;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+    line-height: 80px;
+  
+}
+
+#header:hover{
+    height: 80px;
+    width: 500px;
+    margin: 10px auto;
+    font-size: 5em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #bc2e1e;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+/* inputs container */
+
+
+.inputContainer3 {
+    display: flex;
+    width: 800px;
+    margin: 20px auto 20px auto;
+    justify-content: space-evenly;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+  
+   
+}
+
+/* color input, line thickness, slider */
+.input {
+    height: 30px;
+    font-size: 1.3em;
+}
+
+#slider {
+    margin: 10px auto;
+}
+
+
+#linewidth {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%; /*this draws the linewidth */
+    background: black;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#thicknessInput {
+    position: relative;
+    /*we made this relative since this is the parent of #linewidth that we want to adjsut the top and left values*/
+}
+
+.inputContainer4 {
+    display: block;
+    justify-content: space-around;
+    width: 300px;
+    margin: 0 auto 0 auto;
+    font-size: 1.3em ;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: cornflowerblue;
+
+}
+
+
+div .input3 label {
+    position: relative;
+    top: 20%;
+    height: 30px;
+    font-size: 1.3em;
+}
+
+input[type=checkbox],input[type=radio] {
+    transform: scale(1.5);
+
+}
+
+
+/*erase, save & restart buttons*/
+
+.inputContainer2 {
+    width: 400px;
+    margin: 40px auto 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.input2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color:seagreen;
+    font-size: 1.3em;
+}
+
+.button:hover {
+    height: 50px;
+    color: rgba(91, 180, 231, 0.5);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.button:active {
+    position: relative;
+    bottom: 8px;
+    color:palegoldenrod;
+}
+
+.eraseMode {
+    position: relative;
+    bottom: 8px;
+    color:palegoldenrod;
+}
+
+/* slider*/
+
+.ui-slider-handle:hover {
+    cursor: grab;
+}
+
+.ui-slider-handle:active {
+    cursor: grabbing;
+}
+
+
+
+/* canvas container*/
+#container {
+    width: 800px;
+    height: 500px;
+    border: 5px solid rgba(112, 174, 229, 0.5);
+    margin: 10px auto;
+}
+
+
+#paint {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
+
+/* slider */
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 13.8px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #3f89c8;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #265985;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 8.4px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #3f89c8;
+  }
+  

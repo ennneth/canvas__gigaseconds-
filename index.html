@@ -1,0 +1,107 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Drawing App</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+
+    <!-- fabric cdn -->
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!--title-->
+    <div id="header">Drawing App</div>
+
+    <!--buttons-->
+    <div class="inputContainer2">
+        <!--Undo-->
+        <!-- <div class="input2">
+            <span id="undo" class="button" type= 'disabled'><span><img src="./images/save.png" alt="undo"></span>Undo</span>
+        </div> -->
+        <!--Redo-->
+        <!-- <div class="input2">
+            <span id="redo" class="button" type= 'disabled'><span><img src="./images/save.png" alt="redo"></span>Redo</span>
+        </div> -->
+        <!--Save-->
+        <div class="input2">
+            <span id="save" class="button"><span><img src="./images/save.png" alt="save"></span> Save</span>
+        </div>
+
+        <!--Reset-->
+        <div class="input2">
+            <span id="clearCanvas" class="button" value="Clear Canvas"><span><img src="./images/restart.png"
+                        alt="restart"></span> Reset</span>
+        </div>
+    </div>
+
+    <!--canvas container-->
+    <div id="container">
+        <canvas id="paint" width="800px" height="500px"></canvas>
+    </div>
+
+
+
+    <div class="inputContainer3">
+
+        <div class="input3">
+            <img src="/images/eraser.png"><input type="radio" name='shape' value="erase">
+        </div>
+        <div class="input3">
+            <img src="/images/circle.png"><input type="radio" name='shape' value="circle">
+        </div>
+        <div class="input3">
+            <img src="/images/arc.png"><input type="radio" name='shape' value="arc">
+        </div>
+        <div class="input3">
+            <img src="/images/rectangle.png"><input type="radio" name='shape' value="polygon">
+        </div>
+        <div class="input3">
+            <img src="/images/straight-line.png"><input type="radio" name='shape' value="line" checked>
+        </div>
+        <div class="input3">
+            <label>Line Color: <input id="strokeColor" type="color" value="#00ffff"></label>
+        </div>
+        <div class="input3">
+            <label><img src="/images/fill.png" alt="fill"><input type="checkbox" id="fill"></label>
+        </div>
+        <div class="input3">
+            <label>Fill Color: <input id="fillColor" type="color" value="#24B0D5"></label>
+        </div>
+
+
+    </div>
+
+    <div class="inputContainer4">
+
+        <div>
+            <label>Polygon Sides: <input type="range" id="polygonSides" step="1" min="3" max="8"> </label>
+
+        </div>
+
+        <div>
+            <label>Polygon Angle: <input type="range" id="polygonAngle" step="22.5" min="0" max="90"> </label>
+
+        </div>
+        <div>
+            <label>Line Width: <input type="range" id="lineWidth" step="1" min="1" max="80" value="4"> </label>
+
+        </div>
+    </div>
+
+
+
+    
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- jquery ui cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>
